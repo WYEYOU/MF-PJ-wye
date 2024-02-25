@@ -1,0 +1,159 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    mat-toolbar button:hover {
+      background-color: rgb(61, 61, 61);
+    }
+    .example-form .mat-form-field-outline {
+      outline-color: white;
+    }
+
+    .example-form
+      .mat-form-field-appearance-outline
+      .mat-form-field-outline-start,
+    .example-form
+      .mat-form-field-appearance-outline
+      .mat-form-field-outline-end {
+      border-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 100%; top: 0; position: fixed;">
+    <mat-toolbar style="background-color: rgb(37, 37, 37)">
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div style="display: flex; align-items: center">
+          <img
+            src="https://ng-hw-1.firebaseapp.com/assets/images/icon.png"
+            alt=""
+            style="width: 11%"
+          />
+          <h1 style="font-weight: bold; font-size: 150%; color: white">
+            Game of Thrones
+          </h1>
+          <span class="example-spacer"></span>
+        </div>
+        <div
+          style="
+            width: 35%;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+          "
+        >
+          <button mat-button>Home</button>
+          <button mat-button>Story</button>
+          <button mat-button>Episode</button>
+          <button mat-button>Videos</button>
+          <button mat-button [routerLink]="['/login']">Log out</button>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+  <div
+    style="
+      width: 100%;
+      height: 100%;
+      background-color: rgb(43, 43, 43);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 64px;
+      box-sizing: border-box;
+    "
+  >
+    <div
+      style="width: 1300px; margin-top: 2%; margin-bottom: 2%; display: flex"
+    >
+      <img
+        src="https://ng-hw-1.firebaseapp.com/assets/images/photo.jpg"
+        alt=""
+        style="width: 30%"
+      />
+      <div style="width: 100%; margin-left: 7%">
+        <p style="color: white; font-size: 130%; margin-top: 0%">
+          Daenerys Targaryen
+        </p>
+        <mat-divider style="background-color: gray"></mat-divider>
+        <p style="color: white; font-size: 100%">Character</p>
+        <p style="color: white; font-size: 90%">
+          Daenerys Targaryen is the daughter of King Aerys II Targaryen (also
+          referred to as "The Mad King") and his sister-wife Queen Rhaella, and
+          is one of the last survivors of House Targaryen. She serves as the
+          third-person point-of-view character of 31 chapters of A Game of
+          Thrones, A Clash of Kings, A Storm of Swords, and A Dance with
+          Dragons. This makes her the series' fourth most prominent narrative
+          voice after Tyrion Lannister, Jon Snow and Arya Stark.
+        </p>
+      </div>
+    </div>
+    <div style="width: 1300px; margin-bottom: 2%">
+      <div style="display: flex">
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Ydi80YrCnPY"
+            title="Game of Thrones | Official Daenerys Targaryen Trailer (HBO)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div style="width: 100%; margin-left: 7%">
+          <p style="color: white; font-size: 100%; margin-top: 0%">
+            Personality
+          </p>
+          <p style="color: white; font-size: 90%">
+            Daenerys is most often described as uncommonly beautiful, with long,
+            pale silver-gold hair and purple eyes. She is slender and pale,
+            although taller than some of her female ancestors. Tales of
+            Daenerys's beauty are numerous, and throughout the novels she
+            encounters countless suitors who seek her hand in marriage,
+            sometimes to gain control of her three dragons. She is fluent in the
+            Common Tongue of Westeros, Dothraki, High Valyrian and bastard
+            Valyrian, which she speaks with a Tyroshi accent. Over the course of
+            the first three novels she becomes fluent in the Dothraki language
+            and Ghiscari, spoken in the slave cities in Essos.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 1300px; height: 100%; margin-bottom: 2%">
+      <mat-divider style="background-color: gray"></mat-divider>
+      <p style="color: white; font-size: 90%">Comment</p>
+      <form class="example-form" style="margin-top: 0%;">
+        <mat-form-field
+          class="example-full-width"
+          appearance="outline"
+          style="width: 100%; height: 130px;"
+        >
+          <mat-label style="color: white;">What do you feel about this?</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+      </form>
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+            <mat-icon fontIcon="favorite" style="color: rgb(255, 0, 0);"></mat-icon>
+            <mat-icon fontIcon="favorite" style="color: rgb(255, 102, 0);"></mat-icon>
+            <mat-icon fontIcon="favorite" style="color: rgb(253, 236, 1);"></mat-icon>
+            <mat-icon fontIcon="favorite" style="color: rgb(40, 255, 2);"></mat-icon>
+            <mat-icon fontIcon="favorite" style="color: rgb(0, 149, 255);"></mat-icon>
+            <mat-icon fontIcon="favorite" style="color: rgb(38, 0, 255);"></mat-icon>
+            <mat-icon fontIcon="favorite" style="color: rgb(230, 0, 255);"></mat-icon>
+        </div>
+        <button mat-flat-button style="background-color: rgb(62, 62, 62); color: white;">Send</button>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</body>

@@ -1,0 +1,6 @@
+::ng-deep .example-full-width .mdc-notched-outline > * {
+    border-color: white !important;
+}
+.example-full-width textarea::placeholder{
+    color: white;
+}
